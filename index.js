@@ -66,12 +66,60 @@ var x = 10;
 let y = 20;
 const z = 30;
 
-console.log(x);
-console.log(y);
-console.log(z);
-
 // const z = 40;
 // console.log(z);    it will show error
+
+
+// loops
+
+// for(i=x+1;i<=20;i++){
+//     console.log(i);  
+// }
+
+// while(x<20){
+//     console.log(x);
+//     x++;
+// }
+
+
+
+//functions
+
+function callfunct(){
+
+    alert("You called a function");  
+    console.log("function called")
+}
+
+//  array
+
+var array1=["shivam","raj","sumit"];
+
+function arrays(){
+    for(i=0;i<=array1.length;i++){
+        console.log(array1[i]);
+    }
+}
+
+// objects
+
+emp={id:112,name:"shivam",salary:"20000"};
+
+function objects(){
+    
+        console.log(emp.id+" "+emp.name+" "+emp.salary);
+
+}
+
+// rest api is fetched
+
+
+
+
+
+
+
+
 
 
 
