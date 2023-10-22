@@ -60,7 +60,18 @@ changeTextButton3.addEventListener("click", function(){
     });
 
 
+// var let const variables
 
+var x = 10;
+let y = 20;
+const z = 30;
+
+console.log(x);
+console.log(y);
+console.log(z);
+
+// const z = 40;
+// console.log(z);    it will show error
 
 
 
