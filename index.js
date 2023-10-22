@@ -113,7 +113,16 @@ function objects(){
 
 // rest api is fetched
 
+async function getdata(){
+    fetch('https://demo0260207.mockable.io')
+    .then((response)=>{
+        return response.text();
+    }).then((data)=>{
+        console.log(data);
+        fetchdatatext.textContent = "Data fetched, see console";
 
+    })
+  }
 
 
 
