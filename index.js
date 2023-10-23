@@ -113,16 +113,40 @@ function objects(){
 
 // rest api is fetched
 
-async function getdata(){
-    fetch('https://demo0260207.mockable.io')
-    .then((response)=>{
-        return response.text();
-    }).then((data)=>{
-        console.log(data);
-        fetchdatatext.textContent = "Data fetched, see console";
-
-    })
+function fetchDataAndDisplay(url) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Clicked on service");
+        const dataContainer = document.getElementById("data-container");
+        dataContainer.innerHTML = ""; 
+  
+        if (data.length > 0) {
+          const ul = document.createElement("ul");
+          data.forEach((item) => {
+            const li = document.createElement("li");
+            li.textContent = item.name;
+            ul.appendChild(li);
+          });
+          dataContainer.appendChild(ul);
+        } else {
+          dataContainer.textContent = "No data available.";
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
+  
+  document.getElementById("webbutton").addEventListener("click", () => {
+    fetchDataAndDisplay("https://demo0260207.mockable.io/service1");
+  });
+
+
+  // file system
+
+
+  
 
 
 
