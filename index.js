@@ -143,9 +143,20 @@ function fetchDataAndDisplay(url) {
   });
 
 
-  // file system
+// callbacks in javascript
+var a = 10;
+var b = 20;
+function callfunc(){
+  console.log(a+b);
+}
 
+function callfunc2(c,d,callback){
+    console.log(c-d);
+    callback();
+}
 
+callfunc2(a,b,callfunc);
+console.log("Hurray callbacks are working");
   
 
 

@@ -30,6 +30,5 @@ var bufstr = read.toString();
 console.log(bufstr);
 
 
-// rename
 
 
